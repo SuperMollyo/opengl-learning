@@ -39,6 +39,7 @@
 /* Begin PBXFileReference section */
 		092790BD2369342200EAFCC8 /* stb_image.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = stb_image.h; sourceTree = "<group>"; };
 		092790C0236961D600EAFCC8 /* glm */ = {isa = PBXFileReference; lastKnownFileType = folder; path = glm; sourceTree = "<group>"; };
+		0935C3EA236D4D3B00C52041 /* camera.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = camera.h; sourceTree = "<group>"; };
 		09411D6523235CD800659A76 /* OpenGLHomework1 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = OpenGLHomework1; sourceTree = BUILT_PRODUCTS_DIR; };
 		09411D6823235CD800659A76 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		09411D7023235D9F00659A76 /* OpenGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGL.framework; path = System/Library/Frameworks/OpenGL.framework; sourceTree = SDKROOT; };
@@ -87,6 +88,7 @@
 				09411D6823235CD800659A76 /* main.cpp */,
 				09814647232368A700FB7A11 /* Shader.h */,
 				092790BD2369342200EAFCC8 /* stb_image.h */,
+				0935C3EA236D4D3B00C52041 /* camera.h */,
 			);
 			path = OpenGLHomework1;
 			sourceTree = "<group>";

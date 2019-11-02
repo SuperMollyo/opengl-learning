@@ -144,7 +144,7 @@ dependencies: \
   /Users/mollychanelr/Documents/School/College/Fall\ 2019/COMP465/hw/OpenGLHomework1/OpenGLHomework1/glm/vector_relational.hpp \
   /Users/mollychanelr/Documents/School/College/Fall\ 2019/COMP465/hw/OpenGLHomework1/OpenGLHomework1/glm/integer.hpp \
   /Users/mollychanelr/Documents/School/College/Fall\ 2019/COMP465/hw/OpenGLHomework1/OpenGLHomework1/glm/detail/func_integer.inl \
-  /Users/mollychanelr/Documents/School/College/Fall\ 2019/COMP465/hw/OpenGLHomework1/OpenGLHomework1/stb_image.h \
+  /Users/mollychanelr/Documents/School/College/Fall\ 2019/COMP465/hw/OpenGLHomework1/OpenGLHomework1/camera.h \
   /Users/mollychanelr/Documents/School/College/Fall\ 2019/COMP465/hw/OpenGLHomework1/OpenGLHomework1/glm/gtc/matrix_transform.hpp \
   /Users/mollychanelr/Documents/School/College/Fall\ 2019/COMP465/hw/OpenGLHomework1/OpenGLHomework1/glm/gtc/../mat4x4.hpp \
   /Users/mollychanelr/Documents/School/College/Fall\ 2019/COMP465/hw/OpenGLHomework1/OpenGLHomework1/glm/gtc/../vec2.hpp \
@@ -168,6 +168,7 @@ dependencies: \
   /Users/mollychanelr/Documents/School/College/Fall\ 2019/COMP465/hw/OpenGLHomework1/OpenGLHomework1/glm/gtc/../geometric.hpp \
   /Users/mollychanelr/Documents/School/College/Fall\ 2019/COMP465/hw/OpenGLHomework1/OpenGLHomework1/glm/gtc/../trigonometric.hpp \
   /Users/mollychanelr/Documents/School/College/Fall\ 2019/COMP465/hw/OpenGLHomework1/OpenGLHomework1/glm/gtc/../matrix.hpp \
+  /Users/mollychanelr/Documents/School/College/Fall\ 2019/COMP465/hw/OpenGLHomework1/OpenGLHomework1/stb_image.h \
   /Users/mollychanelr/Documents/School/College/Fall\ 2019/COMP465/hw/OpenGLHomework1/OpenGLHomework1/glm/gtc/type_ptr.hpp \
   /Users/mollychanelr/Documents/School/College/Fall\ 2019/COMP465/hw/OpenGLHomework1/OpenGLHomework1/glm/gtc/../gtc/quaternion.hpp \
   /Users/mollychanelr/Documents/School/College/Fall\ 2019/COMP465/hw/OpenGLHomework1/OpenGLHomework1/glm/gtc/../gtc/constants.hpp \
