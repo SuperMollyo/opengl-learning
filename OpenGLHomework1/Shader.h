@@ -5,7 +5,7 @@
 #include <fstream>
 #include <sstream>
 #include <iostream>
-
+#include "glm/glm.hpp"
 #include <GL/glew.h>
 
 class Shader
@@ -96,6 +96,11 @@ public:
     {
         glUseProgram( this->Program );
     }
+    
+    void setMat4(const std::string &name, const glm::mat4 &mat) const
+       {
+           glUniformMatrix4fv(glGetUniformLocation(ID, name.c_str()), 1, GL_FALSE, &mat[0][0]);
+       }
     
 //    void setInt(const std::string &name, int value) const
 //    {
