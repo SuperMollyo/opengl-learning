@@ -1,24 +1,24 @@
 
 #include "stdio.h"
 //#include <functional>
-
-//#include "/Library/Developer/CommandLineTools/usr/include/c++/v1/iostream"
-//#include <cmath>
+//#include <iostream>
+#include "/Library/Developer/CommandLineTools/usr/include/c++/v1/iostream"
+#include <cmath>
 // GLEW
 #define GLEW_STATIC
 #include <GL/glew.h>
 
 // GLFW
 #include <GLFW/glfw3.h>
-#include <iostream>
+
 // Other includes
 #include "Shader.h"
 #define STB_IMAGE_IMPLEMENTATION
 #include "stb_image.h"
 
-//#include "glm/glm.hpp"
-//#include "glm/gtc/matrix_transform.hpp"
-//#include "glm/gtc/type_ptr.hpp"
+#include "glm/glm.hpp"
+#include "glm/gtc/matrix_transform.hpp"
+#include "glm/gtc/type_ptr.hpp"
 // Window dimensions
 const GLuint WIDTH = 800, HEIGHT = 600;
 
@@ -150,11 +150,20 @@ int main( )
 
         // bind Texture
         glBindTexture(GL_TEXTURE_2D, texture);
+        // create transformations
+        glm::mat4 transform = glm::mat4(1.0f); // make sure to initialize matrix to identity matrix first
+        transform = glm::translate(transform, glm::vec3(0.5f, -0.5f, 0.0f));
+        transform = glm::rotate(transform, (float)glfwGetTime(), glm::vec3(0.0f, 0.0f, 1.0f));
+        
 
-        // render container
+        // get matrix's uniform location and set matrix
         ourShader.Use();
+        unsigned int transformLoc = glGetUniformLocation(ourShader.ID, "transform");
+        glUniformMatrix4fv(transformLoc, 1, GL_FALSE, glm::value_ptr(transform));
+        
+        // render container
         glBindVertexArray(VAO);
-        glDrawElements(GL_TRIANGLES, 6, GL_UNSIGNED_INT, 0)
+        glDrawElements(GL_TRIANGLES, 6, GL_UNSIGNED_INT, 0);
         // Swap the screen buffers
         glfwSwapBuffers( window );
        
