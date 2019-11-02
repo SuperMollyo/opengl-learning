@@ -13,7 +13,7 @@
 
 // Other includes
 #include "Shader.h"
-#include "camera.h"
+#include "MyCamera.h"
 #define STB_IMAGE_IMPLEMENTATION
 #include "stb_image.h"
 
@@ -30,7 +30,7 @@ void processInput(GLFWwindow *window);
 
 
 // camera
-Camera camera(glm::vec3(0.0f, 0.0f, 3.0f));
+MyCamera camera(glm::vec3(0.0f, 0.0f, 3.0f));
 float lastX = SCR_WIDTH / 2.0f;
 float lastY = SCR_HEIGHT / 2.0f;
 bool firstMouse = true;
@@ -101,47 +101,47 @@ int main( )
     GLfloat vertices[] =
     {
          // positions          // colors           // texture coords
-               -0.5f, -0.5f, -0.5f,  0.0f, 0.0f,
-                 0.5f, -0.5f, -0.5f,  1.0f, 0.0f,
-                 0.5f,  0.5f, -0.5f,  1.0f, 1.0f,
-                 0.5f,  0.5f, -0.5f,  1.0f, 1.0f,
-                -0.5f,  0.5f, -0.5f,  0.0f, 1.0f,
-                -0.5f, -0.5f, -0.5f,  0.0f, 0.0f,
+               -0.5f, -0.5f, -0.5f, 0.0f, 0.0f,
+               0.5f, -0.5f, -0.5f, 1.0f, 0.0f,
+               0.5f, 0.5f, -0.5f, 1.0f, 1.0f,
+               0.5f, 0.5f, -0.5f, 1.0f, 1.0f,
+               -0.5f, 0.5f, -0.5f, 0.0f, 1.0f,
+               -0.5f, -0.5f, -0.5f, 0.0f, 0.0f,
 
-                -0.5f, -0.5f,  0.5f,  0.0f, 0.0f,
-                 0.5f, -0.5f,  0.5f,  1.0f, 0.0f,
-                 0.5f,  0.5f,  0.5f,  1.0f, 1.0f,
-                 0.5f,  0.5f,  0.5f,  1.0f, 1.0f,
-                -0.5f,  0.5f,  0.5f,  0.0f, 1.0f,
-                -0.5f, -0.5f,  0.5f,  0.0f, 0.0f,
+               -0.5f, -0.5f, 0.5f, 0.0f, 0.0f,
+               0.5f, -0.5f, 0.5f, 1.0f, 0.0f,
+               0.5f, 0.5f, 0.5f, 1.0f, 1.0f,
+               0.5f, 0.5f, 0.5f, 1.0f, 1.0f,
+               -0.5f, 0.5f, 0.5f, 0.0f, 1.0f,
+               -0.5f, -0.5f, 0.5f, 0.0f, 0.0f,
 
-                -0.5f,  0.5f,  0.5f,  1.0f, 0.0f,
-                -0.5f,  0.5f, -0.5f,  1.0f, 1.0f,
-                -0.5f, -0.5f, -0.5f,  0.0f, 1.0f,
-                -0.5f, -0.5f, -0.5f,  0.0f, 1.0f,
-                -0.5f, -0.5f,  0.5f,  0.0f, 0.0f,
-                -0.5f,  0.5f,  0.5f,  1.0f, 0.0f,
+               -0.5f, 0.5f, 0.5f, 1.0f, 0.0f,
+               -0.5f, 0.5f, -0.5f, 1.0f, 1.0f,
+               -0.5f, -0.5f, -0.5f, 0.0f, 1.0f,
+               -0.5f, -0.5f, -0.5f, 0.0f, 1.0f,
+               -0.5f, -0.5f, 0.5f, 0.0f, 0.0f,
+               -0.5f, 0.5f, 0.5f, 1.0f, 0.0f,
 
-                 0.5f,  0.5f,  0.5f,  1.0f, 0.0f,
-                 0.5f,  0.5f, -0.5f,  1.0f, 1.0f,
-                 0.5f, -0.5f, -0.5f,  0.0f, 1.0f,
-                 0.5f, -0.5f, -0.5f,  0.0f, 1.0f,
-                 0.5f, -0.5f,  0.5f,  0.0f, 0.0f,
-                 0.5f,  0.5f,  0.5f,  1.0f, 0.0f,
+               0.5f, 0.5f, 0.5f, 1.0f, 0.0f,
+               0.5f, 0.5f, -0.5f, 1.0f, 1.0f,
+               0.5f, -0.5f, -0.5f, 0.0f, 1.0f,
+               0.5f, -0.5f, -0.5f, 0.0f, 1.0f,
+               0.5f, -0.5f, 0.5f, 0.0f, 0.0f,
+               0.5f, 0.5f, 0.5f, 1.0f, 0.0f,
 
-                -0.5f, -0.5f, -0.5f,  0.0f, 1.0f,
-                 0.5f, -0.5f, -0.5f,  1.0f, 1.0f,
-                 0.5f, -0.5f,  0.5f,  1.0f, 0.0f,
-                 0.5f, -0.5f,  0.5f,  1.0f, 0.0f,
-                -0.5f, -0.5f,  0.5f,  0.0f, 0.0f,
-                -0.5f, -0.5f, -0.5f,  0.0f, 1.0f,
+               -0.5f, -0.5f, -0.5f, 0.0f, 1.0f,
+               0.5f, -0.5f, -0.5f, 1.0f, 1.0f,
+               0.5f, -0.5f, 0.5f, 1.0f, 0.0f,
+               0.5f, -0.5f, 0.5f, 1.0f, 0.0f,
+               -0.5f, -0.5f, 0.5f, 0.0f, 0.0f,
+               -0.5f, -0.5f, -0.5f, 0.0f, 1.0f,
 
-                -0.5f,  0.5f, -0.5f,  0.0f, 1.0f,
-                 0.5f,  0.5f, -0.5f,  1.0f, 1.0f,
-                 0.5f,  0.5f,  0.5f,  1.0f, 0.0f,
-                 0.5f,  0.5f,  0.5f,  1.0f, 0.0f,
-                -0.5f,  0.5f,  0.5f,  0.0f, 0.0f,
-                -0.5f,  0.5f, -0.5f,  0.0f, 1.0f
+               -0.5f, 0.5f, -0.5f, 0.0f, 1.0f,
+               0.5f, 0.5f, -0.5f, 1.0f, 1.0f,
+               0.5f, 0.5f, 0.5f, 1.0f, 0.0f,
+               0.5f, 0.5f, 0.5f, 1.0f, 0.0f,
+               -0.5f, 0.5f, 0.5f, 0.0f, 0.0f,
+               -0.5f, 0.5f, -0.5f, 0.0f, 1.0f
     };
     
 // world space positions of our cubes
@@ -322,6 +322,10 @@ void processInput(GLFWwindow *window)
         camera.ProcessKeyboard(LEFT, deltaTime);
     if (glfwGetKey(window, GLFW_KEY_D) == GLFW_PRESS)
         camera.ProcessKeyboard(RIGHT, deltaTime);
+    if (glfwGetKey(window, GLFW_KEY_UP) == GLFW_PRESS)
+        camera.ProcessKeyboard(UP, deltaTime);
+    if (glfwGetKey(window, GLFW_KEY_DOWN) == GLFW_PRESS)
+        camera.ProcessKeyboard(DOWN, deltaTime);
 }
 
 // glfw: whenever the window size changed (by OS or user resize) this callback function executes
