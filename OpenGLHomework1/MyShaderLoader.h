@@ -1,5 +1,9 @@
-#ifndef SHADER_H
-#define SHADER_H
+//#ifndef MyShaderLoader_h
+//#define MyShaderLoader_h
+#ifndef MYSHADERLOADER_H
+#define MYSHADERLOADER_H
+
+//#endif /* MyShaderLoader_h */
 
 #include <string>
 #include <fstream>
@@ -8,13 +12,13 @@
 #include "glm/glm.hpp"
 #include <GL/glew.h>
 
-class Shader
+class MyShaderLoader
 {
 public:
     GLuint Program;
     unsigned int ID;
     // Constructor generates the shader on the fly
-    Shader( const GLchar *vertexPath, const GLchar *fragmentPath )
+    MyShaderLoader( const GLchar *vertexPath, const GLchar *fragmentPath )
     {
         // 1. Retrieve the vertex/fragment source code from filePath
         std::string vertexCode;

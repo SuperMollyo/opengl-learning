@@ -43,9 +43,9 @@
 		09411D6523235CD800659A76 /* OpenGLHomework1 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = OpenGLHomework1; sourceTree = BUILT_PRODUCTS_DIR; };
 		09411D6823235CD800659A76 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		09411D7023235D9F00659A76 /* OpenGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGL.framework; path = System/Library/Frameworks/OpenGL.framework; sourceTree = SDKROOT; };
+		09479F862370190A001F4441 /* MyShaderLoader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyShaderLoader.h; sourceTree = "<group>"; };
 		0981464023235F7500FB7A11 /* libGLEW.2.1.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libGLEW.2.1.0.dylib; path = ../../../../../../../../../usr/local/Cellar/glew/2.1.0/lib/libGLEW.2.1.0.dylib; sourceTree = "<group>"; };
 		0981464223235F8B00FB7A11 /* libglfw.3.3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libglfw.3.3.dylib; path = ../../../../../../../../../usr/local/Cellar/glfw/3.3/lib/libglfw.3.3.dylib; sourceTree = "<group>"; };
-		09814647232368A700FB7A11 /* Shader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Shader.h; sourceTree = "<group>"; };
 		0981464B23236C3E00FB7A11 /* resources */ = {isa = PBXFileReference; lastKnownFileType = folder; path = resources; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -86,8 +86,8 @@
 				092790C0236961D600EAFCC8 /* glm */,
 				0981464B23236C3E00FB7A11 /* resources */,
 				09411D6823235CD800659A76 /* main.cpp */,
-				09814647232368A700FB7A11 /* Shader.h */,
 				092790BD2369342200EAFCC8 /* stb_image.h */,
+				09479F862370190A001F4441 /* MyShaderLoader.h */,
 				0935C3EB236D521E00C52041 /* MyCamera.h */,
 			);
 			path = OpenGLHomework1;

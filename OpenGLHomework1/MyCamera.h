@@ -1,9 +1,6 @@
 //  MyCamera.h
 //  OpenGLHomework1
 //
-//  Created by Molly Chanel Rodil on 11/1/19.
-//  Copyright © 2019 Molly Chanel Rodil. All rights reserved.
-//
 
 #ifndef MyCamera_h
 #define MyCamera_h
@@ -12,10 +9,8 @@
 
 // GLFW
 #include <GLFW/glfw3.h>
-//#include <glad/glad.h>
 #include "glm/glm.hpp"
 #include "glm/gtc/matrix_transform.hpp"
-//#include "glm/gtc/type_ptr.hpp"
 
 #include <vector>
 
